@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+ 
+  <script src="./js/swiper.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <title>Viva La Pizza!</title>
+
+<body>
+  
+  <nav>
+    <div id="logodiv">
+      <img id="logo" src="images/logo.png" alt="alforno">
+      </div>
+    <ul id="navlist">
+      <li >
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+      <li>
+        <a href="#">Zamów online</a>
+      </li>
+      <li>
+        <a href="index.html#miesne">Menu</a>
+      </li>
+      <li>
+        <a  href="index.html#onas">O nas</a>
+      </li>
+      <li>
+        <a href="index.html">Strona Główna  </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="kupowanko">
+      <div class="lewy"> 
+        <div class="pizzagen">
+            <select id="pizza">
+              <option value="Z szynką" data-cena="15">Z szynką</option>
+              <option value="Z salami" data-cena="16">Z salami</option>
+              <option value="Z kurczakiem" data-cena="17">Z kurczakiem</option>
+              <option value="Ze kebabem" data-cena="18">Ze kebabem</option>
+              <option value="Z łososiem" data-cena="19">Z łososiem</option>
+              <option value="Z pomidorami i serem" data-cena="15">Z pomidorami i serem</option>
+              <option value="4 sery" data-cena="16">4 sery</option>
+              <option value="Z fetą i oliwkami" data-cena="18">Z fetą i oliwkami</option>
+              <option value="Margaritta" data-cena="20">Margaritta</option>
+              <option value="Z pomidorami" data-cena="5">Z pomidorami</option>
+              <option value="Z orzechami" data-cena="8"> Z orzechami</option>
+              <option value="Z bakłażanem" data-cena="10">Z bakłażanem</option>
+              <option value="Z bananem" data-cena="12"> Z bananem</option>
+              <option value="Samo ciasto" data-cena="14">Samo ciasto</option>
+            </select>
+
+            <div class="rozmiar">
+              <input id="rozmiarmaly" name="rozmiar" type="radio" value="1"><label for="rozmiarmaly">Mała</label>
+              <input id="rozmiarsredni" name="rozmiar" type="radio" value="2"><label for="rozmiarsredni">Średnia</label>
+              <input id="rozmiarduzy" name="rozmiar" type="radio" value="3"><label for="rozmiarduzy">Duża</label>
+            </div>
+            <div id="dodatki">
+                 <input id="czosnkowy" type="checkbox" value="Sos czosnkowy"><label>Sos czosnkowy</label>
+                 <input id="pomidorowy" type="checkbox" value="Sos pomidorowy"><label>Sos pomidorowy</label>
+                 <input id="piciu" type="checkbox" value="Piciu"><label>Piciu</label>
+                 <input id="fryty" type="checkbox" value="Fryty"><label>Fryty</label>
+            </div>
+            <button id="buttonDodaj" class="mniam mniam2" onclick="dodajDoKoszyka()">Dodaj do koszyka</button>
+        </div>
+        
+        <div class="dostawa">
+          <div class="dostawawiersz"><label for="dostawa-imienazwisko">Imię i nazwisko</label><input name="dostawa-imienazwisko" title="Imie i nazwisko"  id="dostawa-imienazwisko" type="text" required pattern="[A-ZĄĘŻŚĆŃŁÓa-ząężźśćńłó\-]{2,}(\s[A-ZĄĘŻĆŃŁÓa-ząężźćńłó\-]{2,}){1,}$"></div>
+          <div class="dostawawiersz"><label for="dostawa-telefon">Numer telefonu</label><input title="Numer telefonu w formacie 123456789" name="dostawa-telefon" id="dostawa-telefon" type="text" required pattern="[0-9]{9}$"></div>
+          <div class="dostawawiersz"><label for="dostawa-email">E-mail</label><input name="dostawa-email" title="Email w formacie xyz@abc.pl" id="dostawa-email" type="email"></div>
+          <div class="dostawawiersz"><label for="dostawa-ulica">Ulica</label><input name="dostawa-ulica" title="Ulica" id="dostawa-ulica" type="text" required></div>
+          <div class="dostawawiersz"><label for="dostawa-numerdomu">Numer domu/lokalu</label><input name="dostawa-numerdomu" id="dostawa-numerdomu" title="Numer domu/mieszkania" type="text" required pattern="[0-9]{1,5}[a-z]{0-1}(\/[0-9]{1,5})?$"></div>
+          <div class="dostawawiersz"></div>
+          <div class="dostawaguziki">
+            <button id="dostawa-zapisz" class="mniam mniam2" onclick="zapiszDostawe()">Zapisz</button>
+            <button id="dostawa-usun" class="mniam mniam2"  onclick="usunDostawe()">Usuń</button>
+          </div>
+          
+          </div>
+        </div>
+      
+      <div id="koszyk">
+        <div id="koszyk-przedmioty"></div>
+        <div id="koszyk-przerwa"></div>
+        <div id="koszyk-koszt" class="dark"></div>
+        <button id="koszyk-zamow" onclick="zamawiam()">Zamawiam!</button>
+      </div>
+    
+  </section>
+
+  <footer>
+    <div class="zielony">
+      &nbsp;
+    </div>
+    <div class="bialy">
+      <h1 class="dark">Powered by JP</h1>
+    </div>
+    <div class="czerwony">
+      &nbsp;
+    </div>
+  </footer>
+  
+    <script src="./js/skrypt.js"></script>
+</body>
+
+</html>
